@@ -1,0 +1,198 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Maquinas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="border border-5">
+<p>A produção da Máquina {{maquina_14003}} é de {{producao_14003}} peças e seu status é: {{status_14003}}</p>
+<p>A produção da Máquina {{maquina_11001}} é de {{producao_11001}} peças e seu status é: {{status_11001}}</p>
+<p>A produção da Máquina {{maquina_20001}} é de {{producao_20001}} peças e seu status é: {{status_20001}}</p>
+<div class="container-fluid position-relative">
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <figure class="figure">
+                    <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
+                         alt="500/2">
+                </figure>
+                <div class="row">
+                    <div class="container-fluid">
+                        <h2 class="position-relative" background-color = "blue">
+                            INJETORA 500/2
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container-fluid">
+                    <div class="col">
+                        <p>PEÇAS: {{producao_14003}} </p>
+                    </div>
+
+                    <div class="col">
+                        <p>STATUS: {{status_14003}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <figure class="figure">
+                    <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
+                         alt="500/1">
+                    <figcaption class="figure-caption">Injetora 500/1.</figcaption>
+                </figure>
+            </div>
+            <div class="row">
+                <p>A produção da Máquina {{maquina_14003}} é de {{producao_14003}} peças e seu status é:
+                    {{status_14003}}</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <figure class="figure">
+                    <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
+                         alt="900/1">
+                    <figcaption class="figure-caption">Injetora 900/1.</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <figure class="figure">
+                    <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
+                         alt="900/2">
+                    <figcaption class="figure-caption">Injetora 900/2.</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <figure class="figure">
+                    <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
+                         alt="500/3">
+                    <figcaption class="figure-caption">Injetora 500/3.</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <figure class="figure">
+                    <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
+                         alt="900/3">
+                    <figcaption class="figure-caption">Injetora 900/3.</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <figure class="figure">
+                    <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
+                         alt="1100/1">
+                    <figcaption class="figure-caption">Injetora 1100/1.</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="col">
+            <figure class="figure">
+                <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
+                     alt="1100/2">
+                <figcaption class="figure-caption">Injetora 1100/2.</figcaption>
+            </figure>
+        </div>
+        <div class="col">
+            <figure class="figure">
+                <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
+                     alt="500/4">
+                <figcaption class="figure-caption">Injetora 500/4.</figcaption>
+            </figure>
+        </div>
+        <div class="col">
+            <figure class="figure">
+                <img src="{% static 'supervisorio/assets/injetoracolosio.jpg' %}" class="figure-img img-fluid rounded"
+                     alt="2000/1">
+                <figcaption class="figure-caption">Injetora 2000/1.</figcaption>
+            </figure>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <figure class="figure">
+                <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
+                     alt="1600/1">
+                <figcaption class="figure-caption">Injetora 1600/1.</figcaption>
+            </figure>
+
+        </div>
+        <div class="col">
+            <figure class="figure">
+                <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
+                     alt="1600/2">
+                <figcaption class="figure-caption">Injetora 1600/2.</figcaption>
+            </figure>
+        </div>
+        <div class="col">
+            <figure class="figure">
+                <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
+                     alt="1400/1">
+                <figcaption class="figure-caption">Injetora 1400/1.</figcaption>
+            </figure>
+        </div>
+        <div class="col">
+            <figure class="figure">
+                <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
+                     alt="1400/2">
+                <figcaption class="figure-caption">Injetora 1400/2.</figcaption>
+            </figure>
+        </div>
+        <div class="col">
+            <figure class="figure">
+                <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
+                     alt="1400/3">
+                <figcaption class="figure-caption">Injetora 1400/3.</figcaption>
+            </figure>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <figure class="figure">
+                <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
+                     alt="1000">
+                <figcaption class="figure-caption">Injetora 1000.</figcaption>
+            </figure>
+
+        </div>
+        <div class="col">
+            <figure class="figure">
+                <img src="{% static 'supervisorio/assets/injetoracolosio.jpg' %}" class="figure-img img-fluid rounded"
+                     alt="1200">
+                <figcaption class="figure-caption">Injetora 1200.</figcaption>
+            </figure>
+        </div>
+        <div class="col">
+            <figure class="figure">
+                <img src="{% static 'supervisorio/assets/injetoracolosio.jpg' %}" class="figure-img img-fluid rounded"
+                     alt="2000/2">
+                <figcaption class="figure-caption">Injetora 2000/2.</figcaption>
+            </figure>
+        </div>
+        <div class="col">
+            <figure class="figure">
+                <img src="{% static 'supervisorio/assets/injetoracolosio.jpg' %}" class="figure-img img-fluid rounded"
+                     alt="2000/3">
+                <figcaption class="figure-caption">Injetora 2000/3.</figcaption>
+            </figure>
+        </div>
+
+    </div>
+</div>
+
+</body>
+
+</html>
