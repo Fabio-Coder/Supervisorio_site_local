@@ -1,196 +1,1371 @@
 {%load static%}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Lista de Maquinas</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;900&display=swap"
+          rel="stylesheet">
+    <style>
+        h1{
+            font-family: 'Roboto', sans-serif;
+        }
+
+
+
+
+
+
+    </style>
 </head>
 <body class="border border-5">
-<p>A produção da Máquina {{maquina_14003}} é de {{producao_14003}} peças e seu status é: {{status_14003}}</p>
-<p>A produção da Máquina {{maquina_11001}} é de {{producao_11001}} peças e seu status é: {{status_11001}}</p>
-<p>A produção da Máquina {{maquina_20001}} é de {{producao_20001}} peças e seu status é: {{status_20001}}</p>
+
 <div class="container-fluid position-relative">
+    <img src="{% static 'supervisorio/assets/logo.png' %}">
+    <h1>
+        PROCESSO DE INJEÇÃO CIE AUTOCOM
+    </h1>
+
+</div>
+<!--Container principal-->
+<div class="container-fluid position-relative">
+    <!--    Primeira linha-->
     <div class="row">
-        <div class="col">
+        <!--Coluna principal de cada maquina-->
+        {% if status_5002 == "OK" %}
+        <div class="col" style="background-color:#b3ffd9;text-align:center;">
+            {% elif status_5002 == "Manutenção" %}
+            <div class="col" style="background-color:#ffb3b3;text-align:center;">
+                {% elif status_5002 == "Ferramentaria" %}
+                <div class="col" style="background-color:#ffe0b3;text-align:center;">
+                    {% elif status_5002 == "Processo" %}
+                    <div class="col" style="background-color:#ffffb3;text-align:center;">
+                        {% else %}
+                        <div class="col" style="background-color:#ffffff;text-align:center;">
+                            {% endif %}
+                            <!--                            Linha dentro da coluna da maquina com a imagem-->
+                            <div class="row">
+                                <figure class="figure">
+                                    <img src="{% static 'supervisorio/assets/petransa.png' %}"
+                                         class="figure-img img-fluid rounded"
+                                         alt="500/2">
+                                </figure>
+                                <!--                                Segunda Linha dentro da coluna-->
+                                <div class="row justify-content-md-center">
+                                    <!--                                    Container com o texto-->
+                                    <div class="container-fluid">
+                                        <h2 class="position-relative" background-color="blue">
+                                            INJETORA 500/2
+                                        </h2>
+                                        <!--                                        Fecha container do texto-->
+                                    </div>
+                                    <!--                                    Fecha segunda linha dentro da coluna-->
+                                </div>
+                                <!--                                Fecha linha depois da coluna da maquina com a imagem-->
+                            </div>
+                            <!--                            Linha depos do texto do nome da celula-->
+                            <div class="row">
+                                <!--                                Container depois do texto-->
+                                <div class="container-fluid">
+                                    <!--                                    Coluna com producao-->
+                                    <div class="col">
+                                        <p>PEÇAS: {{producao_5002}} </p>
+                                        <!--                                        Fecha coluna com producao-->
+                                    </div>
+                                    <!--                                Coluna ocm status-->
+                                    <div class="col">
+                                        <p>STATUS: {{status_5002}}</p>
+                                        <!--                                        Fecha coluna com status-->
+                                    </div>
+                                    <!--                                    Fecha container depois do texto-->
+                                </div>
+                                <!--                                Fecha linha depois do texto do nome da celula-->
+                            </div>
+<!--Primeira Maquina 500/2-->
+                            <!--Fecha Coluna principal de cada maquina-->
+                        </div>
+
+
+                        <!--                    -->
+                        <!--                    -->
+                        <!--                    -->
+                        <!--                    -->
+
+
+                        <!--Coluna principal de cada maquina-->
+                        {% if status_5001 == "OK" %}
+                        <div class="col" style="background-color:#b3ffd9;text-align:center;">
+                            {% elif status_5001 == "Manutenção" %}
+                            <div class="col" style="background-color:#ffb3b3;text-align:center;">
+                                {% elif status_5001 == "Ferramentaria" %}
+                                <div class="col" style="background-color:#ffe0b3;text-align:center;">
+                                    {% elif status_5001 == "Processo" %}
+                                    <div class="col" style="background-color:#ffffb3;text-align:center;">
+                                        {% else %}
+                                        <div class="col" style="background-color:#ffffff;text-align:center;">
+                                            {% endif %}
+                                            <!--                            Linha dentro da coluna da maquina com a imagem-->
+                                            <div class="row">
+                                                <figure class="figure">
+                                                    <img src="{% static 'supervisorio/assets/petransa.png' %}"
+                                                         class="figure-img img-fluid rounded"
+                                                         alt="500/1">
+                                                </figure>
+                                                <!--                                Segunda Linha dentro da coluna-->
+                                                <div class="row justify-content-md-center">
+                                                    <!--                                    Container com o texto-->
+                                                    <div class="container-fluid">
+                                                        <h2 class="position-relative" background-color="blue">
+                                                            INJETORA 500/1
+                                                        </h2>
+                                                        <!--                                        Fecha container do texto-->
+                                                    </div>
+                                                    <!--                                    Fecha segunda linha dentro da coluna-->
+                                                </div>
+                                                <!--                                Fecha linha depois da coluna da maquina com a imagem-->
+                                            </div>
+                                            <!--                            Linha depos do texto do nome da celula-->
+                                            <div class="row">
+                                                <!--                                Container depois do texto-->
+                                                <div class="container-fluid">
+                                                    <!--                                    Coluna com producao-->
+                                                    <div class="col">
+                                                        <p>PEÇAS: {{producao_5001}} </p>
+                                                        <!--                                        Fecha coluna com producao-->
+                                                    </div>
+                                                    <!--                                Coluna ocm status-->
+                                                    <div class="col">
+                                                        <p>STATUS: {{status_5001}}</p>
+                                                        <!--                                        Fecha coluna com status-->
+                                                    </div>
+                                                    <!--                                    Fecha container depois do texto-->
+                                                </div>
+                                                <!--                                Fecha linha depois do texto do nome da celula-->
+                                            </div>
+<!--Segunda maquina 500/1-->
+                                            <!--Fecha Coluna principal de cada maquina-->
+                                        </div>
+
+
+                                        <!--                    -->
+                                        <!--                    -->
+                                        <!--                    -->
+                                        <!--                    -->
+                                        <!--                    -->
+                                        <!--                    -->
+                                        <!--                    -->
+
+
+                                        <!--Coluna principal de cada maquina-->
+                                        {% if status_9003 == "OK" %}
+                                        <div class="col" style="background-color:#b3ffd9;text-align:center;">
+                                            {% elif status_9003 == "Manutenção" %}
+                                            <div class="col" style="background-color:#ffb3b3;text-align:center;">
+                                                {% elif status_9003 == "Ferramentaria" %}
+                                                <div class="col" style="background-color:#ffe0b3;text-align:center;">
+                                                    {% elif status_9003 == "Processo" %}
+                                                    <div class="col"
+                                                         style="background-color:#ffffb3;text-align:center;">
+                                                        {% else %}
+                                                        <div class="col"
+                                                             style="background-color:#ffffff;text-align:center;">
+                                                            {% endif %}
+                                                            <!--                            Linha dentro da coluna da maquina com a imagem-->
+                                                            <div class="row">
+                                                                <figure class="figure">
+                                                                    <img src="{% static 'supervisorio/assets/petransa.png' %}"
+                                                                         class="figure-img img-fluid rounded"
+                                                                         alt="500/2">
+                                                                </figure>
+                                                                <!--                                Segunda Linha dentro da coluna-->
+                                                                <div class="row justify-content-md-center">
+                                                                    <!--                                    Container com o texto-->
+                                                                    <div class="container-fluid">
+                                                                        <h2 class="position-relative"
+                                                                            background-color="blue">
+                                                                            INJETORA 900/3
+                                                                        </h2>
+                                                                        <!--                                        Fecha container do texto-->
+                                                                    </div>
+                                                                    <!--                                    Fecha segunda linha dentro da coluna-->
+                                                                </div>
+                                                                <!--                                Fecha linha depois da coluna da maquina com a imagem-->
+                                                            </div>
+                                                            <!--                            Linha depos do texto do nome da celula-->
+                                                            <div class="row">
+                                                                <!--                                Container depois do texto-->
+                                                                <div class="container-fluid">
+                                                                    <!--                                    Coluna com producao-->
+                                                                    <div class="col">
+                                                                        <p>PEÇAS: {{producao_9003}} </p>
+                                                                        <!--                                        Fecha coluna com producao-->
+                                                                    </div>
+                                                                    <!--                                Coluna ocm status-->
+                                                                    <div class="col">
+                                                                        <p>STATUS: {{status_9003}}</p>
+                                                                        <!--                                        Fecha coluna com status-->
+                                                                    </div>
+                                                                    <!--                                    Fecha container depois do texto-->
+                                                                </div>
+                                                                <!--                                Fecha linha depois do texto do nome da celula-->
+                                                            </div>
+<!--Terceira Maquina 900/3-->
+                                                            <!--Fecha Coluna principal de cada maquina-->
+                                                        </div>
+
+
+                                                        <!--                    -->
+                                                        <!--                    -->
+                                                        <!--                    -->
+                                                        <!--                    -->
+                                                        <!--                    -->
+                                                        <!--                    -->
+                                                        <!--                    -->
+
+
+                                                        <!--Coluna principal de cada maquina-->
+                                                        {% if status_9002 == "OK" %}
+                                                        <div class="col"
+                                                             style="background-color:#b3ffd9;text-align:center;">
+                                                            {% elif status_9002 == "Manutenção" %}
+                                                            <div class="col"
+                                                                 style="background-color:#ffb3b3;text-align:center;">
+                                                                {% elif status_9002 == "Ferramentaria" %}
+                                                                <div class="col"
+                                                                     style="background-color:#ffe0b3;text-align:center;">
+                                                                    {% elif status_9002 == "Processo" %}
+                                                                    <div class="col"
+                                                                         style="background-color:#ffffb3;text-align:center;">
+                                                                        {% else %}
+                                                                        <div class="col"
+                                                                             style="background-color:#ffffff;text-align:center;">
+                                                                            {% endif %}
+                                                                            <!--                            Linha dentro da coluna da maquina com a imagem-->
+                                                                            <div class="row">
+                                                                                <figure class="figure">
+                                                                                    <img src="{% static 'supervisorio/assets/petransa.png' %}"
+                                                                                         class="figure-img img-fluid rounded"
+                                                                                         alt="900/2">
+                                                                                </figure>
+                                                                                <!--                                Segunda Linha dentro da coluna-->
+                                                                                <div class="row justify-content-md-center">
+                                                                                    <!--                                    Container com o texto-->
+                                                                                    <div class="container-fluid">
+                                                                                        <h2 class="position-relative"
+                                                                                            background-color="blue">
+                                                                                            INJETORA 900/2
+                                                                                        </h2>
+                                                                                        <!--                                        Fecha container do texto-->
+                                                                                    </div>
+                                                                                    <!--                                    Fecha segunda linha dentro da coluna-->
+                                                                                </div>
+                                                                                <!--                                Fecha linha depois da coluna da maquina com a imagem-->
+                                                                            </div>
+                                                                            <!--                            Linha depos do texto do nome da celula-->
+                                                                            <div class="row">
+                                                                                <!--                                Container depois do texto-->
+                                                                                <div class="container-fluid">
+                                                                                    <!--                                    Coluna com producao-->
+                                                                                    <div class="col">
+                                                                                        <p>PEÇAS: {{producao_9002}} </p>
+                                                                                        <!--                                        Fecha coluna com producao-->
+                                                                                    </div>
+                                                                                    <!--                                Coluna ocm status-->
+                                                                                    <div class="col">
+                                                                                        <p>STATUS: {{status_9002}}</p>
+                                                                                        <!--                                        Fecha coluna com status-->
+                                                                                    </div>
+                                                                                    <!--                                    Fecha container depois do texto-->
+                                                                                </div>
+                                                                                <!--                                Fecha linha depois do texto do nome da celula-->
+                                                                            </div>
+<!--Quarta Maquina 900/2-->
+                                                                            <!--Fecha Coluna principal de cada maquina-->
+                                                                        </div>
+                                                                        <!--                   Fecha primeira linha-->
+                                                                    </div>
+                                                                    <!--                    -->
+                                                                    <!--                    -->
+                                                                    <!--                    -->
+<!--    Segunda Linha linha-->
+<div class="row">
+<!--    Quinta Maquina 500/3-->
+    <!--Coluna principal de cada maquina-->
+    {% if status_5003 == "OK" %}
+    <div class="col"
+         style="background-color:#b3ffd9;text-align:center;">
+        {% elif status_5003 == "Manutenção" %}
+        <div class="col"
+             style="background-color:#ffb3b3;text-align:center;">
+            {% elif status_5003 == "Ferramentaria"
+            %}
+            <div class="col"
+                 style="background-color:#ffe0b3;text-align:center;">
+                {% elif status_5003 == "Processo" %}
+                <div class="col"
+                     style="background-color:#ffffb3;text-align:center;">
+                    {% else %}
+                    <div class="col"
+                         style="background-color:#ffffff;text-align:center;">
+                        {% endif %}
+                        <!--                            Linha dentro da coluna da maquina com a imagem-->
+                        <div class="row">
+                            <figure class="figure">
+                                <img src="{% static 'supervisorio/assets/petransa.png' %}"
+                                     class="figure-img img-fluid rounded"
+                                     alt="500/3">
+                            </figure>
+                            <!--                                Segunda Linha dentro da coluna-->
+                            <div class="row justify-content-md-center">
+                                <!--                                    Container com o texto-->
+                                <div class="container-fluid">
+                                    <h2 class="position-relative"
+                                        background-color="blue">
+                                        INJETORA
+                                        500/3
+                                    </h2>
+                                    <!--                                        Fecha container do texto-->
+                                </div>
+                                <!--                                    Fecha segunda linha dentro da coluna-->
+                            </div>
+                            <!--                                Fecha linha depois da coluna da maquina com a imagem-->
+                        </div>
+                        <!--                            Linha depos do texto do nome da celula-->
+                        <div class="row">
+                            <!--                                Container depois do texto-->
+                            <div class="container-fluid">
+                                <!--                                    Coluna com producao-->
+                                <div class="col">
+                                    <p>PEÇAS:
+                                        {{producao_5003}} </p>
+                                    <!--                                        Fecha coluna com producao-->
+                                </div>
+                                <!--                                Coluna ocm status-->
+                                <div class="col">
+                                    <p>STATUS:
+                                        {{status_5003}}</p>
+                                    <!--                                        Fecha coluna com status-->
+                                </div>
+                                <!--                                    Fecha container depois do texto-->
+                            </div>
+                            <!--                                Fecha linha depois do texto do nome da celula-->
+                        </div>
+<!--Quinta maquina 500/3-->
+                        <!--Fecha Coluna principal de cada maquina-->
+                    </div>
+
+
+                    <!--                    -->
+                    <!--                    -->
+                    <!--                    -->
+                    <!--                    -->
+
+<!--Sexta Maquina 1100/1-->
+                    <!--Coluna principal de cada maquina-->
+                    {% if status_11001 == "OK" %}
+                    <div class="col" style="background-color:#b3ffd9;text-align:center;">
+                        {% elif status_11001 == "Manutenção" %}
+                        <div class="col" style="background-color:#ffb3b3;text-align:center;">
+                            {% elif status_11001 == "Ferramentaria" %}
+                            <div class="col" style="background-color:#ffe0b3;text-align:center;">
+                                {% elif status_11001 == "Processo" %}
+                                <div class="col" style="background-color:#ffffb3;text-align:center;">
+                                    {% else %}
+                                    <div class="col" style="background-color:#ffffff;text-align:center;">
+                                        {% endif %}
+                                        <!--                            Linha dentro da coluna da maquina com a imagem-->
+                                        <div class="row">
+                                            <figure class="figure">
+                                                <img src="{% static 'supervisorio/assets/petransa.png' %}"
+                                                     class="figure-img img-fluid rounded"
+                                                     alt="1100/1">
+                                            </figure>
+                                            <!--                                Segunda Linha dentro da coluna-->
+                                            <div class="row justify-content-md-center">
+                                                <!--                                    Container com o texto-->
+                                                <div class="container-fluid">
+                                                    <h2 class="position-relative"
+                                                        background-color="blue">
+                                                        INJETORA
+                                                        1100/1
+                                                    </h2>
+                                                    <!--                                        Fecha container do texto-->
+                                                </div>
+                                                <!--                                    Fecha segunda linha dentro da coluna-->
+                                            </div>
+                                            <!--                                Fecha linha depois da coluna da maquina com a imagem-->
+                                        </div>
+                                        <!--                            Linha depos do texto do nome da celula-->
+                                        <div class="row">
+                                            <!--                                Container depois do texto-->
+                                            <div class="container-fluid">
+                                                <!--                                    Coluna com producao-->
+                                                <div class="col">
+                                                    <p>
+                                                        PEÇAS:
+                                                        {{producao_11001}} </p>
+                                                    <!--                                        Fecha coluna com producao-->
+                                                </div>
+                                                <!--                                Coluna ocm status-->
+                                                <div class="col">
+                                                    <p>
+                                                        STATUS:
+                                                        {{status_11001}}</p>
+                                                    <!--                                        Fecha coluna com status-->
+                                                </div>
+                                                <!--                                    Fecha container depois do texto-->
+                                            </div>
+                                            <!--                                Fecha linha depois do texto do nome da celula-->
+                                        </div>
+<!--Sexta maquina 1100/1-->
+                                        <!--Fecha Coluna principal de cada maquina-->
+                                    </div>
+
+
+                                    <!--                    -->
+                                    <!--                    -->
+                                    <!--                    -->
+                                    <!--                    -->
+                                    <!--                    -->
+                                    <!--                    -->
+                                    <!--                    -->
+
+<!--Setima maquina 900/1-->
+                                    <!--Coluna principal de cada maquina-->
+                                    {% if status_9001 == "OK" %}
+                                    <div class="col"
+                                         style="background-color:#b3ffd9;text-align:center;">
+                                        {% elif status_9001 == "Manutenção"  %}
+                                        <div class="col"
+                                             style="background-color:#ffb3b3;text-align:center;">
+                                            {% elif  status_9001  == "Ferramentaria" %}
+                                            <div class="col"
+                                                 style="background-color:#ffe0b3;text-align:center;">
+                                                {% elif status_9001  ==  "Processo"  %}
+                                                <div class="col"
+                                                     style="background-color:#ffffb3;text-align:center;">
+                                                    {% else %}
+                                                    <div class="col"
+                                                         style="background-color:#ffffff;text-align:center;">
+                                                        {%  endif %}
+                                                        <!--                            Linha dentro da coluna da maquina com a imagem-->
+                                                        <div class="row">
+                                                            <figure class="figure">
+                                                                <img src="{% static 'supervisorio/assets/petransa.png' %}"
+                                                                     class="figure-img img-fluid rounded"
+                                                                     alt="500/2">
+                                                            </figure>
+                                                            <!--                                Segunda Linha dentro da coluna-->
+                                                            <div class="row justify-content-md-center">
+                                                                <!--                                    Container com o texto-->
+                                                                <div class="container-fluid">
+                                                                    <h2 class="position-relative"
+                                                                        background-color="blue">
+                                                                        INJETORA
+                                                                        900/1
+                                                                    </h2>
+                                                                    <!--                                        Fecha container do texto-->
+                                                                </div>
+                                                                <!--                                    Fecha segunda linha dentro da coluna-->
+                                                            </div>
+                                                            <!--                                Fecha linha depois da coluna da maquina com a imagem-->
+                                                        </div>
+                                                        <!--                            Linha depos do texto do nome da celula-->
+                                                        <div class="row">
+                                                            <!--                                Container depois do texto-->
+                                                            <div class="container-fluid">
+                                                                <!--                                    Coluna com producao-->
+                                                                <div class="col">
+                                                                    <p>
+                                                                        PEÇAS:
+                                                                        {{producao_9001}} </p>
+                                                                    <!--                                        Fecha coluna com producao-->
+                                                                </div>
+                                                                <!--                                Coluna ocm status-->
+                                                                <div class="col">
+                                                                    <p>
+                                                                        STATUS:
+                                                                        {{status_9001}}</p>
+                                                                    <!--                                        Fecha coluna com status-->
+                                                                </div>
+                                                                <!--                                    Fecha container depois do texto-->
+                                                            </div>
+                                                            <!--                                Fecha linha depois do texto do nome da celula-->
+                                                        </div>
+<!--Setima maquina 900/1-->
+                                                        <!--Fecha Coluna principal de cada maquina-->
+                                                    </div>
+
+
+                                                    <!--                    -->
+                                                    <!--                    -->
+                                                    <!--                    -->
+                                                    <!--                    -->
+                                                    <!--                    -->
+                                                    <!--                    -->
+                                                    <!--                    -->
+
+<!--Oitava maquina 1100/2-->
+                                                    <!--Coluna principal de cada maquina-->
+                                                    {% if status_11002 ==  "OK" %}
+                                                    <div class="col"
+                                                         style="background-color:#b3ffd9;text-align:center;">
+                                                        {%  elif  status_11002  ==  "Manutenção"  %}
+                                                        <div class="col"
+                                                             style="background-color:#ffb3b3;text-align:center;">
+                                                            {%  elif  status_11002 ==  "Ferramentaria"  %}
+                                                            <div class="col"
+                                                                 style="background-color:#ffe0b3;text-align:center;">
+                                                                {%  elif  status_11002 == "Processo"  %}
+                                                                <div class="col"
+                                                                     style="background-color:#ffffb3;text-align:center;">
+                                                                    {%  else  %}
+                                                                    <div class="col"
+                                                                         style="background-color:#ffffff;text-align:center;">
+                                                                        {%  endif  %}
+                                                                        <!--                            Linha dentro da coluna da maquina com a imagem-->
+                                                                        <div class="row">
+                                                                            <figure class="figure">
+                                                                                <img src="{% static 'supervisorio/assets/petransa.png' %}"
+                                                                                     class="figure-img img-fluid rounded"
+                                                                                     alt="1100/2">
+                                                                            </figure>
+                                                                            <!--                                Segunda Linha dentro da coluna-->
+                                                                            <div class="row justify-content-md-center">
+                                                                                <!--                                    Container com o texto-->
+                                                                                <div class="container-fluid">
+                                                                                    <h2 class="position-relative"
+                                                                                        background-color="blue">
+                                                                                        INJETORA
+                                                                                        1100/2
+                                                                                    </h2>
+                                                                                    <!--                                        Fecha container do texto-->
+                                                                                </div>
+                                                                                <!--                                    Fecha segunda linha dentro da coluna-->
+                                                                            </div>
+                                                                            <!--                                Fecha linha depois da coluna da maquina com a imagem-->
+                                                                        </div>
+                                                                        <!--                            Linha depos do texto do nome da celula-->
+                                                                        <div class="row">
+                                                                            <!--                                Container depois do texto-->
+                                                                            <div class="container-fluid">
+                                                                                <!--                                    Coluna com producao-->
+                                                                                <div class="col">
+                                                                                    <p>
+                                                                                        PEÇAS:
+                                                                                        {{producao_11002}} </p>
+                                                                                    <!--                                        Fecha coluna com producao-->
+                                                                                </div>
+                                                                                <!--                                Coluna ocm status-->
+                                                                                <div class="col">
+                                                                                    <p>
+                                                                                        STATUS:
+                                                                                        {{status_11002}}</p>
+                                                                                    <!--                                        Fecha coluna com status-->
+                                                                                </div>
+                                                                                <!--                                    Fecha container depois do texto-->
+                                                                            </div>
+                                                                            <!--                                Fecha linha depois do texto do nome da celula-->
+                                                                        </div>
+<!--Nona maquina 1100/2-->
+                                                                        <!--Fecha Coluna principal de cada maquina-->
+                                                                    </div>
+                                                                    <!--                   Fecha Segunda linha-->
+                                                                </div>
+                                                                <!--                    -->
+                                                                <!--                    -->
+                                                                <!--                    -->
+                                                        <!--    Terceira linha-->
+                                                        <div class="row">
+<!--                                                            Nona maquina 500/4-->
+                                                            <!--Coluna principal de cada maquina-->
+                                                            {% if status_5004 ==  "OK"  %}
+                                                            <div class="col" style="background-color:#b3ffd9;text-align:center;">
+                                                                {% elif status_5004  ==  "Manutenção"  %}
+                                                                <div class="col"
+                                                                     style="background-color:#ffb3b3;text-align:center;">
+                                                                    {%  elif status_5004  == "Ferramentaria"  %}
+                                                                    <div class="col"
+                                                                         style="background-color:#ffe0b3;text-align:center;">
+                                                                        {%  elif  status_5004  == "Processo"  %}
+                                                                        <div class="col"
+                                                                             style="background-color:#ffffb3;text-align:center;">
+                                                                            {% else  %}
+                                                                            <div class="col"
+                                                                                 style="background-color:#ffffff;text-align:center;">
+                                                                                {% endif  %}
+                                                                                <!--                            Linha dentro da coluna da maquina com a imagem-->
+                                                                                <div class="row">
+                                                                                    <figure class="figure">
+                                                                                        <img src="{% static 'supervisorio/assets/petransa.png' %}"
+                                                                                             class="figure-img img-fluid rounded"
+                                                                                             alt="500/4">
+                                                                                    </figure>
+                                                                                    <!--                                Segunda Linha dentro da coluna-->
+                                                                                    <div class="row justify-content-md-center">
+                                                                                        <!--                                    Container com o texto-->
+                                                                                        <div class="container-fluid">
+                                                                                            <h2 class="position-relative"
+                                                                                                background-color="blue">
+                                                                                                INJETORA
+                                                                                                500/4
+                                                                                            </h2>
+                                                                                            <!--                                        Fecha container do texto-->
+                                                                                        </div>
+                                                                                        <!--                                    Fecha segunda linha dentro da coluna-->
+                                                                                    </div>
+                                                                                    <!--                                Fecha linha depois da coluna da maquina com a imagem-->
+                                                                                </div>
+                                                                                <!--                            Linha depos do texto do nome da celula-->
+                                                                                <div class="row">
+                                                                                    <!--                                Container depois do texto-->
+                                                                                    <div class="container-fluid">
+                                                                                        <!--                                    Coluna com producao-->
+                                                                                        <div class="col">
+                                                                                            <p>
+                                                                                                PEÇAS:
+                                                                                                {{producao_5004}} </p>
+                                                                                            <!--                                        Fecha coluna com producao-->
+                                                                                        </div>
+                                                                                        <!--                                Coluna ocm status-->
+                                                                                        <div class="col">
+                                                                                            <p>
+                                                                                                STATUS:
+                                                                                                {{status_5004}}</p>
+                                                                                            <!--                                        Fecha coluna com status-->
+                                                                                        </div>
+                                                                                        <!--                                    Fecha container depois do texto-->
+                                                                                    </div>
+                                                                                    <!--                                Fecha linha depois do texto do nome da celula-->
+                                                                                </div>
+<!--Nona maquina 500/4-->
+                                                                                <!--Fecha Coluna principal de cada maquina-->
+                                                                            </div>
+
+
+    <!--                    -->
+    <!--                    -->
+    <!--                    -->
+    <!--                    -->
+
+<!--Decima maquina 2000/1-->
+    <!--Coluna principal de cada maquina-->
+    {% if status_20001  ==  "OK"  %}
+    <div class="col"
+         style="background-color:#b3ffd9;text-align:center;">
+        {% elif status_20001  ==  "Manutenção" %}
+        <div class="col"
+             style="background-color:#ffb3b3;text-align:center;">
+            {% elif  status_20001  == "Ferramentaria"  %}
+            <div class="col"
+                 style="background-color:#ffe0b3;text-align:center;">
+                {%  elif  status_20001  == "Processo" %}
+                <div class="col"
+                     style="background-color:#ffffb3;text-align:center;">
+                    {% else %}
+                    <div class="col"
+                         style="background-color:#ffffff;text-align:center;">
+                        {% endif %}
+                        <!--                            Linha dentro da coluna da maquina com a imagem-->
+                        <div class="row">
+                            <figure class="figure">
+                                <img src="{% static 'supervisorio/assets/colosio.png' %}"
+                                     class="figure-img img-fluid rounded"
+                                     alt="2000/1">
+                            </figure>
+                            <!--                                Segunda Linha dentro da coluna-->
+                            <div class="row justify-content-md-center">
+                                <!--                                    Container com o texto-->
+                                <div class="container-fluid">
+                                    <h2 class="position-relative"
+                                        background-color="blue">
+                                        INJETORA
+                                        2000/1
+                                    </h2>
+                                    <!--                                        Fecha container do texto-->
+                                </div>
+                                <!--                                    Fecha segunda linha dentro da coluna-->
+                            </div>
+                            <!--                                Fecha linha depois da coluna da maquina com a imagem-->
+                        </div>
+                        <!--                            Linha depos do texto do nome da celula-->
+                        <div class="row">
+                            <!--                                Container depois do texto-->
+                            <div class="container-fluid">
+                                <!--                                    Coluna com producao-->
+                                <div class="col">
+                                    <p>
+                                        PEÇAS:
+                                        {{producao_20001}} </p>
+                                    <!--                                        Fecha coluna com producao-->
+                                </div>
+                                <!--                                Coluna ocm status-->
+                                <div class="col">
+                                    <p>
+                                        STATUS:
+                                        {{status_20001}}</p>
+                                    <!--                                        Fecha coluna com status-->
+                                </div>
+                                <!--                                    Fecha container depois do texto-->
+                            </div>
+                            <!--                                Fecha linha depois do texto do nome da celula-->
+                        </div>
+
+                        <!--Fecha Coluna principal de cada maquina-->
+                    </div>
+
+<!--Decima maquina 20001-->
+                    <!--                    -->
+                    <!--                    -->
+        <!--                    -->
+        <!--                    -->
+        <!--                    -->
+        <!--                    -->
+        <!--                    -->
+
+<!--Decima-primeira maquina 1600/1-->
+        <!--Coluna principal de cada maquina-->
+        {% if  status_16001 == "OK" %}
+        <div class="col"
+             style="background-color:#b3ffd9;text-align:center;">
+            {% elif  status_16001  == "Manutenção"  %}
+            <div class="col"
+                 style="background-color:#ffb3b3;text-align:center;">
+                {% elif status_16001 ==  "Ferramentaria"  %}
+                <div class="col"
+                     style="background-color:#ffe0b3;text-align:center;">
+                    {% elif status_16001   == "Processo"  %}
+                    <div class="col"
+                         style="background-color:#ffffb3;text-align:center;">
+                        {% else  %}
+                        <div class="col"
+                             style="background-color:#ffffff;text-align:center;">
+                            {%  endif  %}
+                            <!--                            Linha dentro da coluna da maquina com a imagem-->
+                            <div class="row">
+                                <figure class="figure">
+                                    <img src="{% static 'supervisorio/assets/petransa.png' %}"
+                                         class="figure-img img-fluid rounded"
+                                         alt="1600/1">
+                                </figure>
+                                <!--                                Segunda Linha dentro da coluna-->
+                                <div class="row justify-content-md-center">
+                                    <!--                                    Container com o texto-->
+                                    <div class="container-fluid">
+                                        <h2 class="position-relative"
+                                            background-color="blue">
+                                            INJETORA
+                                            1600/1
+                                        </h2>
+                                        <!--                                        Fecha container do texto-->
+                                    </div>
+                                    <!--                                    Fecha segunda linha dentro da coluna-->
+                                </div>
+                                <!--                                Fecha linha depois da coluna da maquina com a imagem-->
+                            </div>
+                            <!--                            Linha depos do texto do nome da celula-->
+                            <div class="row">
+                                <!--                                Container depois do texto-->
+                                <div class="container-fluid">
+                                    <!--                                    Coluna com producao-->
+                                    <div class="col">
+                                        <p>
+                                            PEÇAS:
+                                            {{producao_16001}} </p>
+                                        <!--                                        Fecha coluna com producao-->
+                                    </div>
+                                    <!--                                Coluna ocm status-->
+                                    <div class="col">
+                                        <p>
+                                            STATUS:
+                                            {{status_16001}}</p>
+                                        <!--                                        Fecha coluna com status-->
+                                    </div>
+                                    <!--                                    Fecha container depois do texto-->
+                                </div>
+                                <!--                                Fecha linha depois do texto do nome da celula-->
+                            </div>
+
+                            <!--Fecha Coluna principal de cada maquina-->
+                        </div>
+<!--Decima-primeira maquina 1600/1-->
+
+                        <!--                    -->
+                        <!--                    -->
+                        <!--                    -->
+                        <!--                    -->
+                        <!--                    -->
+                        <!--                    -->
+                        <!--                    -->
+
+<!---->
+<!--Decima segunda maquina 1600/2  &lt;!&ndash;Coluna principal de cada maquina&ndash;&gt;-->
+        {% if status_16002 == "OK" %}
+        <div class="col"
+             style="background-color:#b3ffd9;text-align:center;">
+            {% elif status_16002 ==  "Manutenção"  %}
+            <div class="col"
+                 style="background-color:#ffb3b3;text-align:center;">
+                {%  elif   status_16002   ==   "Ferramentaria"   %}
+                <div class="col"
+                     style="background-color:#ffe0b3;text-align:center;">
+                    {%  elif  status_16002  ==   "Processo"  %}
+                    <div class="col"
+                         style="background-color:#ffffb3;text-align:center;">
+                        {%   else  %}
+                        <div class="col"
+                             style="background-color:#ffffff;text-align:center;">
+                            {% endif  %}
+                            <!--                            Linha dentro da coluna da maquina com a imagem-->
+                            <div class="row">
+                                <figure class="figure">
+                                    <img src="{% static 'supervisorio/assets/petransa.png' %}"
+                                         class="figure-img img-fluid rounded"
+                                         alt="1600/2">
+                                </figure>
+                                <!--                                Segunda Linha dentro da coluna-->
+                                <div class="row justify-content-md-center">
+                                    <!--                                    Container com o texto-->
+                                    <div class="container-fluid">
+                                        <h2 class="position-relative"
+                                            background-color="blue">
+                                            INJETORA
+                                            1600/2
+                                        </h2>
+                                        <!--                                        Fecha container do texto-->
+                                    </div>
+                                    <!--                                    Fecha segunda linha dentro da coluna-->
+                                </div>
+                                <!--                                Fecha linha depois da coluna da maquina com a imagem-->
+                            </div>
+                            <!--                            Linha depos do texto do nome da celula-->
+                            <div class="row">
+                                <!--                                Container depois do texto-->
+                                <div class="container-fluid">
+                                    <!--                                    Coluna com producao-->
+                                    <div class="col">
+                                        <p>
+                                            PEÇAS:
+                                            {{producao_16002}} </p>
+                                        <!--                                        Fecha coluna com producao-->
+                                    </div>
+                                    <!--                                Coluna ocm status-->
+                                    <div class="col">
+                                        <p>
+                                            STATUS:
+                                            {{status_16002}}</p>
+                                        <!--                                        Fecha coluna com status-->
+                                    </div>
+                                    <!--                                    Fecha container depois do texto-->
+                                </div>
+                                <!--                                Fecha linha depois do texto do nome da celula-->
+                            </div>
+
+                            <!--Fecha Coluna principal de cada maquina-->
+                        </div>
+                        <!--                   Fecha terceira linha-->
+                            </div>
+                            <!--                    -->
+                            <!--                    -->
+                            <!--                    -->
+            <!--    Quarta linha-->
+            <div class="row">
+<!--                Decima terceira maquina 1400/1-->
+                <!--Coluna principal de cada maquina-->
+                {% if status_14001 == "OK" %}
+        <div class="col"
+             style="background-color:#b3ffd9;text-align:center;">
+            {% elif status_14001 ==  "Manutenção"  %}
+            <div class="col"
+                 style="background-color:#ffb3b3;text-align:center;">
+                {%  elif   status_14001   ==   "Ferramentaria"   %}
+                <div class="col"
+                     style="background-color:#ffe0b3;text-align:center;">
+                    {%  elif  status_14001  ==   "Processo"  %}
+                    <div class="col"
+                         style="background-color:#ffffb3;text-align:center;">
+                        {%   else  %}
+                        <div class="col"
+                             style="background-color:#ffffff;text-align:center;">
+                            {% endif  %}
+                                    <!--                            Linha dentro da coluna da maquina com a imagem-->
+                                    <div class="row">
+                                        <figure class="figure">
+                                            <img src="{% static 'supervisorio/assets/petransa.png' %}"
+                                                 class="figure-img img-fluid rounded"
+                                                 alt="1400/1">
+                                        </figure>
+                                        <!--                                Segunda Linha dentro da coluna-->
+                                        <div class="row justify-content-md-center">
+                                            <!--                                    Container com o texto-->
+                                            <div class="container-fluid">
+                                                <h2 class="position-relative"
+                                                    background-color="blue">
+                                                    INJETORA
+                                                    1400/1
+                                                </h2>
+                                                <!--                                        Fecha container do texto-->
+                                            </div>
+                                            <!--                                    Fecha segunda linha dentro da coluna-->
+                                        </div>
+                                        <!--                                Fecha linha depois da coluna da maquina com a imagem-->
+                                    </div>
+                                    <!--                            Linha depos do texto do nome da celula-->
+                                    <div class="row">
+                                        <!--                                Container depois do texto-->
+                                        <div class="container-fluid">
+                                            <!--                                    Coluna com producao-->
+                                            <div class="col">
+                                                <p>
+                                                    PEÇAS:
+                                                    {{producao_14001}} </p>
+                                                <!--                                        Fecha coluna com producao-->
+                                            </div>
+                                            <!--                                Coluna ocm status-->
+                                            <div class="col">
+                                                <p>
+                                                    STATUS:
+                                                    {{status_14001}}</p>
+                                                <!--                                        Fecha coluna com status-->
+                                            </div>
+                                            <!--                                    Fecha container depois do texto-->
+                                        </div>
+                                        <!--                                Fecha linha depois do texto do nome da celula-->
+                                    </div>
+
+                                    <!--Fecha Coluna principal de cada maquina-->
+                                </div>
+
+<!--Decima terceira maquina 1400/1-->
+                                <!--                    -->
+                                <!--                    -->
+                                <!--                    -->
+                                <!--                    -->
+
+
+                                <!--Coluna principal de cada maquina-->
+                                {% if status_14002 == "OK" %}
+        <div class="col" style="background-color:#b3ffd9;text-align:center;">
+            {% elif status_14002 == "Manutenção" %}
+            <div class="col" style="background-color:#ffb3b3;text-align:center;">
+                {% elif status_14002 == "Ferramentaria" %}
+                <div class="col" style="background-color:#ffe0b3;text-align:center;">
+                    {% elif status_14002 == "Processo" %}
+                    <div class="col" style="background-color:#ffffb3;text-align:center;">
+                        {% else %}
+                        <div class="col" style="background-color:#ffffff;text-align:center;">
+                            {% endif %}
+            <!--                            Linha dentro da coluna da maquina com a imagem-->
             <div class="row">
                 <figure class="figure">
-                    <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
-                         alt="500/2">
+                    <img src="{% static 'supervisorio/assets/petransa.png' %}"
+                         class="figure-img img-fluid rounded"
+                         alt="1400/2">
                 </figure>
-                <div class="row">
+                <!--                                Segunda Linha dentro da coluna-->
+                <div class="row justify-content-md-center">
+                    <!--                                    Container com o texto-->
                     <div class="container-fluid">
-                        <h2 class="position-relative" background-color = "blue">
-                            INJETORA 500/2
+                        <h2 class="position-relative"
+                            background-color="blue">
+                            INJETORA
+                            1400/2
                         </h2>
+                        <!--                                        Fecha container do texto-->
                     </div>
+                    <!--                                    Fecha segunda linha dentro da coluna-->
                 </div>
+                <!--                                Fecha linha depois da coluna da maquina com a imagem-->
             </div>
+            <!--                            Linha depos do texto do nome da celula-->
             <div class="row">
+                <!--                                Container depois do texto-->
                 <div class="container-fluid">
+                    <!--                                    Coluna com producao-->
                     <div class="col">
-                        <p>PEÇAS: {{producao_14003}} </p>
+                        <p>
+                            PEÇAS:
+                            {{producao_14002}} </p>
+                        <!--                                        Fecha coluna com producao-->
                     </div>
-
+                    <!--                                Coluna ocm status-->
                     <div class="col">
-                        <p>STATUS: {{status_14003}}</p>
+                        <p>
+                            STATUS:
+                            {{status_14002}}</p>
+                        <!--                                        Fecha coluna com status-->
                     </div>
+                    <!--                                    Fecha container depois do texto-->
                 </div>
+                <!--                                Fecha linha depois do texto do nome da celula-->
             </div>
-        </div>
-        <div class="col">
-            <div class="row">
-                <figure class="figure">
-                    <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
-                         alt="500/1">
-                    <figcaption class="figure-caption">Injetora 500/1.</figcaption>
-                </figure>
-            </div>
-            <div class="row">
-                <p>A produção da Máquina {{maquina_14003}} é de {{producao_14003}} peças e seu status é:
-                    {{status_14003}}</p>
-            </div>
-        </div>
-        <div class="col">
-            <div class="row">
-                <figure class="figure">
-                    <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
-                         alt="900/1">
-                    <figcaption class="figure-caption">Injetora 900/1.</figcaption>
-                </figure>
-            </div>
-        </div>
-        <div class="col">
-            <div class="row">
-                <figure class="figure">
-                    <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
-                         alt="900/2">
-                    <figcaption class="figure-caption">Injetora 900/2.</figcaption>
-                </figure>
-            </div>
-        </div>
-        <div class="col">
-            <div class="row">
-                <figure class="figure">
-                    <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
-                         alt="500/3">
-                    <figcaption class="figure-caption">Injetora 500/3.</figcaption>
-                </figure>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div class="row">
-                <figure class="figure">
-                    <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
-                         alt="900/3">
-                    <figcaption class="figure-caption">Injetora 900/3.</figcaption>
-                </figure>
-            </div>
-        </div>
-        <div class="col">
-            <div class="row">
-                <figure class="figure">
-                    <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
-                         alt="1100/1">
-                    <figcaption class="figure-caption">Injetora 1100/1.</figcaption>
-                </figure>
-            </div>
-        </div>
-        <div class="col">
-            <figure class="figure">
-                <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
-                     alt="1100/2">
-                <figcaption class="figure-caption">Injetora 1100/2.</figcaption>
-            </figure>
-        </div>
-        <div class="col">
-            <figure class="figure">
-                <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
-                     alt="500/4">
-                <figcaption class="figure-caption">Injetora 500/4.</figcaption>
-            </figure>
-        </div>
-        <div class="col">
-            <figure class="figure">
-                <img src="{% static 'supervisorio/assets/injetoracolosio.jpg' %}" class="figure-img img-fluid rounded"
-                     alt="2000/1">
-                <figcaption class="figure-caption">Injetora 2000/1.</figcaption>
-            </figure>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <figure class="figure">
-                <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
-                     alt="1600/1">
-                <figcaption class="figure-caption">Injetora 1600/1.</figcaption>
-            </figure>
 
+            <!--Fecha Coluna principal de cada maquina-->
         </div>
-        <div class="col">
+
+<!--Decima quarta maquina 1400/2-->
+                                                <!--                    -->
+                                                <!--                    -->
+                                                <!--                    -->
+                                                <!--                    -->
+                                                <!--                    -->
+                                                <!--                    -->
+                                                <!--                    -->
+
+
+                                                <!--Coluna principal de cada maquina-->
+{% if status_14003 == "OK" %}
+        <div class="col" style="background-color:#b3ffd9;text-align:center;">
+            {% elif status_14003 == "Manutenção" %}
+            <div class="col" style="background-color:#ffb3b3;text-align:center;">
+                {% elif status_14003 == "Ferramentaria" %}
+                <div class="col" style="background-color:#ffe0b3;text-align:center;">
+                    {% elif status_14003 == "Processo" %}
+                    <div class="col" style="background-color:#ffffb3;text-align:center;">
+                        {% else %}
+                        <div class="col" style="background-color:#ffffff;text-align:center;">
+                            {% endif %}
+        <!--                            Linha dentro da coluna da maquina com a imagem-->
+        <div class="row">
             <figure class="figure">
-                <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
-                     alt="1600/2">
-                <figcaption class="figure-caption">Injetora 1600/2.</figcaption>
-            </figure>
-        </div>
-        <div class="col">
-            <figure class="figure">
-                <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
-                     alt="1400/1">
-                <figcaption class="figure-caption">Injetora 1400/1.</figcaption>
-            </figure>
-        </div>
-        <div class="col">
-            <figure class="figure">
-                <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
-                     alt="1400/2">
-                <figcaption class="figure-caption">Injetora 1400/2.</figcaption>
-            </figure>
-        </div>
-        <div class="col">
-            <figure class="figure">
-                <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
+                <img src="{% static 'supervisorio/assets/petransa.png' %}"
+                     class="figure-img img-fluid rounded"
                      alt="1400/3">
-                <figcaption class="figure-caption">Injetora 1400/3.</figcaption>
             </figure>
+            <!--                                Segunda Linha dentro da coluna-->
+            <div class="row justify-content-md-center">
+                <!--                                    Container com o texto-->
+                <div class="container-fluid">
+                    <h2 class="position-relative"
+                        background-color="blue">
+                        INJETORA
+                        1400/3
+                    </h2>
+                    <!--                                        Fecha container do texto-->
+                </div>
+                <!--                                    Fecha segunda linha dentro da coluna-->
+            </div>
+            <!--                                Fecha linha depois da coluna da maquina com a imagem-->
         </div>
+        <!--                            Linha depos do texto do nome da celula-->
+        <div class="row">
+            <!--                                Container depois do texto-->
+            <div class="container-fluid">
+                <!--                                    Coluna com producao-->
+                <div class="col">
+                    <p>
+                        PEÇAS:
+                        {{producao_14003}} </p>
+                    <!--                                        Fecha coluna com producao-->
+                </div>
+                <!--                                Coluna ocm status-->
+                <div class="col">
+                    <p>
+                        STATUS:
+                        {{status_14003}}</p>
+                    <!--                                        Fecha coluna com status-->
+                </div>
+                <!--                                    Fecha container depois do texto-->
+            </div>
+            <!--                                Fecha linha depois do texto do nome da celula-->
+        </div>
+
+        <!--Fecha Coluna principal de cada maquina-->
     </div>
+
+
+    <!--                    -->
+    <!--                    -->
+    <!--                    -->
+    <!--                    -->
+    <!--                    -->
+    <!--                    -->
+    <!--                    -->
+
+<!--Decma sexta maquina 1000-->
+                                                                <!--Coluna principal de cada maquina-->
+ {% if status_1000 == "OK" %}
+        <div class="col" style="background-color:#b3ffd9;text-align:center;">
+            {% elif status_1000 == "Manutenção" %}
+            <div class="col" style="background-color:#ffb3b3;text-align:center;">
+                {% elif status_1000 == "Ferramentaria" %}
+                <div class="col" style="background-color:#ffe0b3;text-align:center;">
+                    {% elif status_1000 == "Processo" %}
+                    <div class="col" style="background-color:#ffffb3;text-align:center;">
+                        {% else %}
+                        <div class="col" style="background-color:#ffffff;text-align:center;">
+                            {% endif %}
+            <!--                            Linha dentro da coluna da maquina com a imagem-->
+            <div class="row">
+                <figure class="figure">
+                    <img src="{% static 'supervisorio/assets/petransa.png' %}"
+                         class="figure-img img-fluid rounded"
+                         alt="1000">
+                </figure>
+                <!--                                Segunda Linha dentro da coluna-->
+                <div class="row justify-content-md-center">
+                    <!--                                    Container com o texto-->
+                    <div class="container-fluid">
+                        <h2 class="position-relative"
+                            background-color="blue">
+                            INJETORA
+                            1000
+                        </h2>
+                        <!--                                        Fecha container do texto-->
+                    </div>
+                    <!--                                    Fecha segunda linha dentro da coluna-->
+                </div>
+                <!--                                Fecha linha depois da coluna da maquina com a imagem-->
+            </div>
+            <!--                            Linha depos do texto do nome da celula-->
+            <div class="row">
+                <!--                                Container depois do texto-->
+                <div class="container-fluid">
+                    <!--                                    Coluna com producao-->
+                    <div class="col">
+                        <p>
+                            PEÇAS:
+                            {{producao_1000}} </p>
+                        <!--                                        Fecha coluna com producao-->
+                    </div>
+                    <!--                                Coluna ocm status-->
+                    <div class="col">
+                        <p>
+                            STATUS:
+                            {{status_1000}}</p>
+                        <!--                                        Fecha coluna com status-->
+                    </div>
+                    <!--                                    Fecha container depois do texto-->
+                </div>
+                <!--                                Fecha linha depois do texto do nome da celula-->
+            </div>
+
+            <!--Fecha Coluna principal de cada maquina-->
+        </div>
+        <!--                   Fecha quarta linha-->
+    </div>
+    <!--                    -->
+    <!--                    -->
+    <!--                    -->
+    <!--    Quinta linha-->
+   <div class="row">
+   <!--Coluna principal de cada maquina-->
+<!--       Decima setima maquina 1200-->
+{% if status_1200 == "OK" %}
+        <div class="col" style="background-color:#b3ffd9;text-align:center;">
+            {% elif status_1200 == "Manutenção" %}
+            <div class="col" style="background-color:#ffb3b3;text-align:center;">
+                {% elif status_1200 == "Ferramentaria" %}
+                <div class="col" style="background-color:#ffe0b3;text-align:center;">
+                    {% elif status_1200 == "Processo" %}
+                    <div class="col" style="background-color:#ffffb3;text-align:center;">
+                        {% else %}
+                        <div class="col" style="background-color:#ffffff;text-align:center;">
+                            {% endif %}
+    <!--                            Linha dentro da coluna da maquina com a imagem-->
     <div class="row">
-        <div class="col">
-            <figure class="figure">
-                <img src="{% static 'supervisorio/assets/petransa.png' %}" class="figure-img img-fluid rounded"
-                     alt="1000">
-                <figcaption class="figure-caption">Injetora 1000.</figcaption>
-            </figure>
-
+        <figure class="figure">
+            <img src="{% static 'supervisorio/assets/colosio.png' %}"
+                 class="figure-img img-fluid rounded"
+                 alt="1200">
+        </figure>
+        <!--                                Segunda Linha dentro da coluna-->
+        <div class="row justify-content-md-center">
+            <!--                                    Container com o texto-->
+            <div class="container-fluid">
+                <h2 class="position-relative"
+                    background-color="blue">
+                    INJETORA
+                    1200
+                </h2>
+                <!--                                        Fecha container do texto-->
+            </div>
+            <!--                                    Fecha segunda linha dentro da coluna-->
         </div>
-        <div class="col">
-            <figure class="figure">
-                <img src="{% static 'supervisorio/assets/injetoracolosio.jpg' %}" class="figure-img img-fluid rounded"
-                     alt="1200">
-                <figcaption class="figure-caption">Injetora 1200.</figcaption>
-            </figure>
-        </div>
-        <div class="col">
-            <figure class="figure">
-                <img src="{% static 'supervisorio/assets/injetoracolosio.jpg' %}" class="figure-img img-fluid rounded"
-                     alt="2000/2">
-                <figcaption class="figure-caption">Injetora 2000/2.</figcaption>
-            </figure>
-        </div>
-        <div class="col">
-            <figure class="figure">
-                <img src="{% static 'supervisorio/assets/injetoracolosio.jpg' %}" class="figure-img img-fluid rounded"
-                     alt="2000/3">
-                <figcaption class="figure-caption">Injetora 2000/3.</figcaption>
-            </figure>
-        </div>
-
+        <!--                                Fecha linha depois da coluna da maquina com a imagem-->
     </div>
+    <!--                            Linha depos do texto do nome da celula-->
+    <div class="row">
+        <!--                                Container depois do texto-->
+        <div class="container-fluid">
+            <!--                                    Coluna com producao-->
+            <div class="col">
+                <p>
+                    PEÇAS:
+                    {{producao_1200}} </p>
+                <!--                                        Fecha coluna com producao-->
+            </div>
+            <!--                                Coluna ocm status-->
+            <div class="col">
+                <p>
+                    STATUS:
+                    {{status_1200}}</p>
+                <!--                                        Fecha coluna com status-->
+            </div>
+            <!--                                    Fecha container depois do texto-->
+        </div>
+        <!--                                Fecha linha depois do texto do nome da celula-->
+    </div>
+
+    <!--Fecha Coluna principal de cada maquina-->
+</div>
+<!--Decima setima maquina 1200-->
+
+<!--                    -->
+<!--                    -->
+<!--                    -->
+<!--                    -->
+
+<!--Decima oitava maquina 2000/2-->
+<!--Coluna principal de cada maquina-->
+{% if status_20002 == "OK" %}
+        <div class="col" style="background-color:#b3ffd9;text-align:center;">
+            {% elif status_20002 == "Manutenção" %}
+            <div class="col" style="background-color:#ffb3b3;text-align:center;">
+                {% elif status_20002 == "Ferramentaria" %}
+                <div class="col" style="background-color:#ffe0b3;text-align:center;">
+                    {% elif status_20002 == "Processo" %}
+                    <div class="col" style="background-color:#ffffb3;text-align:center;">
+                        {% else %}
+                        <div class="col" style="background-color:#ffffff;text-align:center;">
+                            {% endif %}
+                <!--                            Linha dentro da coluna da maquina com a imagem-->
+                <div class="row">
+                    <figure class="figure">
+                        <img src="{% static 'supervisorio/assets/colosio.png' %}"
+                             class="figure-img img-fluid rounded"
+                             alt="2000/2">
+                    </figure>
+                    <!--                                Segunda Linha dentro da coluna-->
+                    <div class="row justify-content-md-center">
+                        <!--                                    Container com o texto-->
+                        <div class="container-fluid">
+                            <h2 class="position-relative"
+                                background-color="blue">
+                                INJETORA
+                                2000/2
+                            </h2>
+                            <!--                                        Fecha container do texto-->
+                        </div>
+                        <!--                                    Fecha segunda linha dentro da coluna-->
+                    </div>
+                    <!--                                Fecha linha depois da coluna da maquina com a imagem-->
+                </div>
+                <!--                            Linha depos do texto do nome da celula-->
+                <div class="row">
+                    <!--                                Container depois do texto-->
+                    <div class="container-fluid">
+                        <!--                                    Coluna com producao-->
+                        <div class="col">
+                            <p>
+                                PEÇAS:
+                                {{producao_20002}} </p>
+                            <!--                                        Fecha coluna com producao-->
+                        </div>
+                        <!--                                Coluna ocm status-->
+                        <div class="col">
+                            <p>
+                                STATUS:
+                                {{status_20002}}</p>
+                            <!--                                        Fecha coluna com status-->
+                        </div>
+                        <!--                                    Fecha container depois do texto-->
+                    </div>
+                    <!--                                Fecha linha depois do texto do nome da celula-->
+                </div>
+
+                <!--Fecha Coluna principal de cada maquina-->
+            </div>
+
+
+            <!--                    -->
+            <!--                    -->
+            <!--                    -->
+            <!--                    -->
+            <!--                    -->
+            <!--                    -->
+            <!--                    -->
+<!--Decima nona maquina 2000/3-->
+
+<!--Coluna principal de cada maquina-->
+{% if status_20003 == "OK" %}
+        <div class="col" style="background-color:#b3ffd9;text-align:center;">
+            {% elif status_20003 == "Manutenção" %}
+            <div class="col" style="background-color:#ffb3b3;text-align:center;">
+                {% elif status_20003 == "Ferramentaria" %}
+                <div class="col" style="background-color:#ffe0b3;text-align:center;">
+                    {% elif status_20003 == "Processo" %}
+                    <div class="col" style="background-color:#ffffb3;text-align:center;">
+                        {% else %}
+                        <div class="col" style="background-color:#ffffff;text-align:center;">
+                            {% endif %}
+                <!--                            Linha dentro da coluna da maquina com a imagem-->
+                <div class="row">
+                    <figure class="figure">
+                        <img src="{% static 'supervisorio/assets/colosio.png' %}"
+                             class="figure-img img-fluid rounded"
+                             alt="2000/3">
+                    </figure>
+                    <!--                                Segunda Linha dentro da coluna-->
+                    <div class="row justify-content-md-center">
+                        <!--                                    Container com o texto-->
+                        <div class="container-fluid">
+                            <h2 class="position-relative"
+                                background-color="blue">
+                                INJETORA
+                                2000/3
+                            </h2>
+                            <!--                                        Fecha container do texto-->
+                        </div>
+                        <!--                                    Fecha segunda linha dentro da coluna-->
+                    </div>
+                    <!--                                Fecha linha depois da coluna da maquina com a imagem-->
+                </div>
+                <!--                            Linha depos do texto do nome da celula-->
+                <div class="row">
+                    <!--                                Container depois do texto-->
+                    <div class="container-fluid">
+                        <!--                                    Coluna com producao-->
+                        <div class="col">
+                            <p>
+                                PEÇAS:
+                                {{producao_20003}} </p>
+                            <!--                                        Fecha coluna com producao-->
+                        </div>
+                        <!--                                Coluna ocm status-->
+                        <div class="col">
+                            <p>
+                                STATUS:
+                                {{status_20003}}</p>
+                            <!--                                        Fecha coluna com status-->
+                        </div>
+                        <!--                                    Fecha container depois do texto-->
+                    </div>
+                    <!--                                Fecha linha depois do texto do nome da celula-->
+                </div>
+
+                <!--Fecha Coluna principal de cada maquina-->
+            </div>
+
+
+            <!--                    -->
+            <!--                    -->
+            <!--                    -->
+            <!--                    -->
+            <!--                    -->
+            <!--                    -->
+            <!--                    -->
+
+        <!--                   Fecha Quinta linha-->
+    </div>
+    <!--                    -->
+    <!--                    -->
+    <!--                    -->
+    <!-- Fecha container principal-->
 </div>
 
 </body>
